@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Snippet Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.min.js"></script>
+</head>
+
+<body style="margin: 2em">
+  <h1 id="top">Form Snippet Library</h1>
+  <a href="#top">
+    <div class="arrow"></div>
+  </a>
+  <ul>
+    <li><a href="#form_tag">Form tag</a></li>
+    <li><a href="#button_tag">Button tag</a></li>
+    <li><a href="#label_tag">Label tag</a></li>
+    <li><a href="#input_type">Input type</a></li>
+    <ul>
+      <li><a href="#time">Time-related input</a></li>
+      <li><a href="#number">Number-related input</a></li>
+      <li><a href="#upload">Upload-related input</a></li>
+      <li><a href="#validation">Validation-related input</a></li>
+    </ul>
+  </ul>
+  <!-- Form tag-->
+  <h2 id="form_tag"> Form tag</h2>
+  <p> Tag that wraps around all the form elements. "action" attribute points to where the data should be submitted</p>
+  <pre><code class="language-html"><form method="post"action=""></form></code></pre>
+
+  <h3>Attributes</h3>
+  <p>Description of the attribute</p>
+
+  <!-- button -->
+  <h2 id="button_tag"> Button tag</h2>
+  <p> Every form needs a button to submit.</p>
+  <pre><code class="language-html"><button type="submit"></button></code></pre>
+
+
+  <!-- label tag-->
+  <h2 id="label_tag"> Label tag</h2>
+  <p>Adds a name to any field. Every field must have a label.</p>
+  <pre><code class="language-html"><label for="..."></code></pre>
+
+  <!-- Input tag-->
+  <h2 id="input_type"> Input types</h2>
+  <p>Adds an input field of varying types. Must always have an id to associate a label. The type="…" attribute defaults
+    to text.</p>
+  <pre><code class="language-html"><input id="..." type="..."></code></pre>
+
+  <h3>text</h3>
+  <p>Single line text field. If you want, you can leave type="text" off the input.</p>
+  <pre><code class="language-html"><input id="name" type="text"></code></pre>
+
+  <h3>tel</h3>
+  <p>For telephone numbers. There is no restricted format to accommodate all different countries..</p>
+  <pre><code class="language-html"><input id="telephone" type="tel"></code></pre>
+
+  <!-- time -->
+  <h2 style="text-decoration: underline;" id="time">Time-related input</h2>
+
+  <h3>time</h3>
+  <p>For accepting time: hours, minutes, seconds.</p>
+  <pre><code class="language-html"><input id="countdown" type="time"></code></pre>
+
+  <h3>week</h3>
+  <p>For accepting a specific week; likely shows a calendar picker.</p>
+  <pre><code class="language-html"><input id="calendar" type="week"></code></pre>
+
+  <h3>month</h3>
+  <p>For accepting a specific month; likely shows a calendar picker.</p>
+  <pre><code class="language-html"><input id="calendar" type="month"></code></pre>
+
+  <h3>date</h3>
+  <p>For accepting dates; shows a calendar picker.</p>
+  <pre><code class="language-html"><input id="calendar" type="date"></code></pre>
+
+  <h3>datetime-local</h3>
+  <p>For accepting a both a date and a time; shows a calendar & time picker.</p>
+  <pre><code class="language-html"><input id="calendar" type="datetime-local"></code></pre>
+
+  <!-- number -->
+  <h2 style="text-decoration: underline;" id="number">Number-related input</h2>
+
+  <h3>range</h3>
+  <p>For selecting from a range of number.</p>
+  <pre><code class="language-html"><input id="satisfaction" type="range"></code></pre>
+
+  <h3>number</h3>
+  <p>Accepts numbers; has a up/down switch.</p>
+  <pre><code class="language-html"><input id="satisfaction" type="number"></code></pre>
+
+  <!-- upload -->
+  <h2 style="text-decoration: underline;" id="upload">Upload-related input</h2>
+
+  <h3>color</h3>
+  <p>For picking a specific colour; shows a colour palette. Outputs as a hex colour.</p>
+  <pre><code class="language-html"><input id="portfolio" type="url"></code></pre>
+
+  <h3>url</h3>
+  <p>Accepts a valid website URL.</p>
+  <pre><code class="language-html"><input id="portfolio" type="url"></code></pre>
+
+  <h3>file</h3>
+  <p>For choosing a file to upload. Use accept="…" to limit filetypes.</p>
+  <pre><code class="language-html"><input type="file" accept=".jpg,.png,.gif" id="photo"></code></pre>
+
+  <h3>search</h3>
+  <p>Specifies the input as a search field.</p>
+  <pre><code class="language-html"><input type="search"></code></pre>
+
+  <h3>email</h3>
+  <p>Accepts valid email addresses.</p>
+  <pre><code class="language-html"><input type="email"></code></pre>
+
+  <h3>password</h3>
+  <p>For passwords; hides typed characters.</p>
+  <pre><code class="language-html"><input type="password"></code></pre>
+
+  <!-- validation -->
+
+  <h2 style="text-decoration: underline;" id="validation">Validation-related input</h2>
+
+  <h3>checkbox</h3>
+  <p>Turns the input into a check toggle.</p>
+  <pre><code class="language-html"><input id="accept_conditions" type="checkbox"></code></pre>
+
+  <h3>radio</h3>
+  <p>Turns the input into a radio button. All radio buttons in the group should have the same name="…"</p>
+  <pre><code class="language-html"><input id="accept_conditions" type="radio"></code></pre>
+
+</body>
+<script>
+  document.querySelectorAll("pre code").forEach((el) => {
+    el.textContent = el.innerHTML;
+  });
+</script>
+
+</html>
